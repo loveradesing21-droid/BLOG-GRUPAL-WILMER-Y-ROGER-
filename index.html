@@ -3,126 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hablemos de la IA</title>
-    <style>
-        /* Estilos Base */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(180deg, #6a5acd 0%, #3a1c71 30%, #000000 60%);
-            color: white;
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1100px;
-            width: 90%;
-            text-align: center;
-            padding: 50px 0;
-        }
-
-        /* Encabezado */
-        h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            margin-bottom: 10px;
-            letter-spacing: 2px;
-            font-weight: 300;
-        }
-
-        .subtitle {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 40px;
-            line-height: 1.4;
-            opacity: 0.9;
-        }
-
-        .email {
-            font-weight: bold;
-            display: block;
-            margin-top: 10px;
-        }
-
-        /* Rejilla de Imágenes (Cards) */
-        .gallery {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap; /* Para que se ajusten en móvil */
-        }
-
-        .card {
-            border: 2px solid #8a2be2;
-            border-radius: 20px;
-            overflow: hidden;
-            background-color: #000;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: scale(1.03);
-        }
-
-        /* Tamaños específicos según el diseño */
-        .card.side {
-            flex: 1;
-            min-width: 250px;
-            aspect-ratio: 1 / 1; /* Cuadradas */
-        }
-
-        .card.main {
-            flex: 2;
-            min-width: 300px;
-            aspect-ratio: 16 / 9; /* Más ancha la del centro */
-        }
-
-        .card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Media Query para teléfonos */
-        @media (max-width: 768px) {
-            .gallery {
-                flex-direction: column;
-            }
-            .card {
-                width: 100%;
-                aspect-ratio: auto;
-            }
-        }
-    </style>
+    <title>Blog de IA - Inicio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1>HABLEMOS DE LA IA</h1>
-            <p class="subtitle">
-                Aqui pondremos una breve descripcion de lo que es la ia y un inicio para ello 
-                
+    <div class="overlay"></div>
+
+    <main class="container">
+        <header class="header">
+            <div class="caja-bienvenido">¡BIENVENIDO!</div>
         </header>
 
-        <main class="gallery">
-            <div class="card side">
-                <img src="tu-imagen-izquierda.jpg" alt="imagen 1 ">
-            </div>
+        <h1 class="titulo-principal">INTELIGENCIA ARTIFICIAL</h1>
 
-            <div class="card main">
-                <img src="tu-imagen-centro.jpg" alt="imagen 2">
-            </div>
+        <section class="seccion-info">
+            <p class="descripcion">
+                "La IA es la capacidad de las máquinas para procesar datos, aprender de ellos y tomar decisiones de forma autónoma. No es solo software; es el intento de replicar la lógica humana en sistemas digitales para resolver problemas complejos en milisegundos."
+            </p>
+        </section>
 
-            <div class="card side">
-                <img src="tu-imagen-derecha.jpg" alt="imagen 3">
+        <div class="footer-left">
+            <a href="#" class="btn-azul btn-grande">VER BLOG</a>
+        </div>
+
+        <div class="footer-right">
+            <div class="botones-paginas">
+                <a href="#" class="btn-azul btn-sm">PAGINA 1</a>
+                <a href="#" class="btn-azul btn-sm">PAGINA 2</a>
+                <a href="#" class="btn-azul btn-sm">PAGINA 3</a>
             </div>
-        </main>
-    </div>
+            <div class="caja-participantes">
+                Wilmer Lovera y Roger
+            </div>
+        </div>
+    </main>
 
 </body>
 </html>

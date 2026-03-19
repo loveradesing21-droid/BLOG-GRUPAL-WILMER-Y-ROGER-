@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* fondo  */
+    background-image: url(Generic_Featured_DarkSideGenAI_1200x628.jpg); 
+    background-size: cover;
+    background-position: center;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+}
+
+/* oscurecer imagen */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    padding: 40px;
+}
+
+/* --- CABECERA --- */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.caja-bienvenido {
+    display: inline-block;
+    border: 2px solid white;
+    padding: 10px 40px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+/* --- TITULO --- */
+.titulo-principal {
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-top: 20px;
+    letter-spacing: -2px;
+}
+
+/* --- DESCRIPCIÓN --- */
+.seccion-info {
+    max-width: 450px;
+    margin-top: 100px;
+}
+
+.descripcion {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* --- BOTONES AZULES --- */
+.btn-azul {
+    background-color: #0d6efd;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn-azul:hover {
+    background-color: #004dc7;
+    transform: scale(1.05);
+}
+
+.btn-grande {
+    padding: 15px 60px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+.btn-sm {
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+/* --- POSICIONAMIENTO de la parte de arriba --- */
+.footer-left {
+    position: absolute;
+    bottom: 100px;
+    left: 40px;
+}
+
+.footer-right {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    text-align: right;
+}
+
+.botones-paginas {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.caja-participantes {
+    display: inline-block;
+    border: 2px solid white;
+    padding: 5px 30px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 768px) {
+    body {
+        /* Permitimos el scroll en el móvil porque el contenido es largo */
+        height: auto;
+        overflow-y: auto; 
+        background-attachment: fixed; /* Mantiene el fondo quieto al bajar */
+    }
+
+    .container {
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .titulo-principal {
+        font-size: 2.8rem; /* Un poco más pequeño para que no se corte */
+        margin-top: 30px;
+    }
+
+    .seccion-info {
+        max-width: 100%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 0 10px;
+    }
+
+    /* Quitamos el posicionamiento absoluto para que fluyan uno tras otro */
+    .footer-left, 
+    .footer-right {
+        position: static; 
+        text-align: center;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .botones-paginas {
+        justify-content: center;
+        flex-wrap: wrap; /* Si no caben, se ponen en dos filas */
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .btn-grande {
+        width: 100%; /* El botón "VER BLOG" ocupa el ancho disponible */
+        padding: 15px 0;
+    }
+
+    .btn-sm {
+        flex: 1; /* Los botones de página se reparten el espacio */
+        min-width: 100px;
+    }
+
+    .caja-participantes {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
