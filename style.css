@@ -1,185 +1,313 @@
+/* =========================================
+   Configuraciones Globales (Tu CSS Original)
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    /* fondo  */
-    background-image: url(Generic_Featured_DarkSideGenAI_1200x628.jpg); 
-    background-size: cover;
-    background-position: center;
-    font-family: 'Montserrat', sans-serif;
-    height: 100vh;
-    color: white;
-    overflow: hidden;
+html {
+    scroll-behavior: smooth;
 }
 
-/* oscurecer imagen */
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('Generic_Featured_DarkSideGenAI_1200x628.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
-    position: relative;
-    z-index: 2;
-    height: 100vh;
-    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* --- CABECERA --- */
-.header {
+/* Overlay de fondo general */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(30, 60, 114, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: -1;
+}
+
+/* Navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(10, 10, 11, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.nav-logo span {
+    color: #007bff;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 90vh;
+    display: flex;
+    align-items: center;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .caja-bienvenido {
     display: inline-block;
-    border: 2px solid white;
-    padding: 10px 40px;
+    background: #007bff;
+    padding: 5px 15px;
     font-weight: 900;
-    letter-spacing: 2px;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
 }
 
-/* --- TITULO --- */
 .titulo-principal {
-    text-align: center;
-    font-size: 4.5rem;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    margin-top: 20px;
-    letter-spacing: -2px;
-}
-
-/* --- DESCRIPCIÓN --- */
-.seccion-info {
-    max-width: 450px;
-    margin-top: 100px;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
 .descripcion {
-    font-family: 'Roboto', sans-serif;
+    max-width: 700px;
+    margin: 0 auto 40px;
     font-size: 1.1rem;
-    line-height: 1.4;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    color: #cccccc;
+    font-style: italic;
 }
 
-/* --- BOTONES AZULES --- */
 .btn-azul {
-    background-color: #0d6efd;
-    color: white;
+    display: inline-block;
+    padding: 15px 40px;
+    background: transparent;
+    border: 2px solid #007bff;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    transition: 0.3s;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
 }
 
 .btn-azul:hover {
-    background-color: #004dc7;
-    transform: scale(1.05);
+    background: #007bff;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
 }
 
-.btn-grande {
-    padding: 15px 60px;
-    border-radius: 5px;
+/* Separadores */
+.separador {
+    background: #ffffff;
+    color: #000;
+    padding: 40px 20px;
+    text-align: center;
+    font-weight: 700;
     font-size: 1.2rem;
-    display: inline-block;
+    text-transform: uppercase;
 }
 
-.btn-sm {
-    padding: 10px 30px;
-    border-radius: 5px;
-    font-size: 0.8rem;
+.separador-alerta {
+    background: #ff4d4d;
+    color: #fff;
 }
 
-/* --- POSICIONAMIENTO de la parte de arriba --- */
-.footer-left {
-    position: absolute;
-    bottom: 100px;
-    left: 40px;
+/* Bloques de Contenido (Tarjetas Originales) */
+.seccion-bloque {
+    padding: 100px 0;
 }
 
-.footer-right {
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
-    text-align: right;
+.subtitulo-seccion {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
-.botones-paginas {
+.text-alerta {
+    color: #ff4d4d;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.card-pro {
+    border-top: 4px solid #007bff;
+}
+
+.card-riesgo {
+    border-top: 4px solid #ff4d4d;
+}
+
+/* =========================================
+   NUEVO DISEÑO: Sección IAs (Replicando Imagen)
+   ========================================= */
+.seccion-ias-destacadas {
+    background: #000000;
+    color: #ffffff;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.subtitulo-seccion-ias {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #ffffff;
+}
+
+.lista-ias-replicada {
     display: flex;
+    flex-direction: column;
     gap: 15px;
-    margin-bottom: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tarjeta-ia-replicada {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 30px;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-ia-replicada:hover {
+    transform: scale(1.01);
+}
+
+.ia-replicada-logo-area {
+    flex: 0 0 130px;
+    height: 130px;
+    background: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.ia-replicada-logo-area img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.ia-replicada-info-area {
+    flex: 1;
+    text-align: left;
+}
+
+.ia-replicada-info-area h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.ia-replicada-info-area p {
+    color: #cccccc;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.enlace-ia-visitar {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.enlace-ia-visitar:hover {
+    color: #4da3ff;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .tarjeta-ia-replicada {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .ia-replicada-logo-area {
+        margin: 0 auto;
+    }
+
+    .ia-replicada-info-area {
+        text-align: center;
+    }
+
+    .subtitulo-seccion-ias {
+        font-size: 2rem;
+    }
+}
+
+.footer-final {
+    padding: 50px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
 }
 
 .caja-participantes {
-    display: inline-block;
-    border: 2px solid white;
-    padding: 5px 30px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    background: rgba(0, 0, 0, 0.3);
-}
-@media (max-width: 768px) {
-    body {
-        /* Permitimos el scroll en el móvil porque el contenido es largo */
-        height: auto;
-        overflow-y: auto; 
-        background-attachment: fixed; /* Mantiene el fondo quieto al bajar */
-    }
-
-    .container {
-        height: auto;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .titulo-principal {
-        font-size: 2.8rem; /* Un poco más pequeño para que no se corte */
-        margin-top: 30px;
-    }
-
-    .seccion-info {
-        max-width: 100%;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        padding: 0 10px;
-    }
-
-    /* Quitamos el posicionamiento absoluto para que fluyan uno tras otro */
-    .footer-left, 
-    .footer-right {
-        position: static; 
-        text-align: center;
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .botones-paginas {
-        justify-content: center;
-        flex-wrap: wrap; /* Si no caben, se ponen en dos filas */
-        gap: 10px;
-        margin-bottom: 20px;
-    }
-
-    .btn-grande {
-        width: 100%; /* El botón "VER BLOG" ocupa el ancho disponible */
-        padding: 15px 0;
-    }
-
-    .btn-sm {
-        flex: 1; /* Los botones de página se reparten el espacio */
-        min-width: 100px;
-    }
-
-    .caja-participantes {
-        width: 100%;
-        box-sizing: border-box;
-    }
+    font-weight: 700;
+    color: #aaaaaa;
 }
